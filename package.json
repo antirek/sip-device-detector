@@ -1,0 +1,26 @@
+{
+  "name": "sip-device-detector",
+  "version": "0.0.1",
+  "description": "Detect sip device by User-Agent header of embedded httpclient",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antirek/sip-device-detector.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antirek/sip-device-detector/issues"
+  },
+  "homepage": "https://github.com/antirek/sip-device-detector#readme",
+  "devDependencies": {
+    "eslint": "^5.7.0",
+    "jasmine": "^3.2.0"
+  }
+}
