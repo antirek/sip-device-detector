@@ -32,6 +32,31 @@ describe("test", () => {
         ua: "Yealink SIP-T28P 2.71.14.4",
         r: { vendor: 'yealink', type: 'phone' }
       },
+      {
+        ua: "Cisco/SPA122-1.3.5(004p_XU001)",
+        r: { vendor: 'cisco', type: 'ata' }
+      },
+      {
+        ua: "3CXPhone 6.0.26523.0",
+        r: { vendor: '3cx', type: 'softphone' }
+      },
+      {
+        ua: "dble",
+        r: { vendor: 'goip', type: 'ata' }
+      },
+      {
+        ua: "Asterisk PBX 13.10.0",
+        r: { vendor: 'asterisk', type: 'pbx' }
+      },
+      {
+        ua: "Panasonic-KX-TGP600RU/01.061 (080023e21a52)",
+        r: { vendor: 'panasonic', type: 'phone' }
+      },
+      {
+        ua: "SIP.js/0.8.0 sipjs.com",
+        r: { vendor: 'sip.js', type: 'webphone' }
+      },
+      
     ]
 
     s.map(item => {

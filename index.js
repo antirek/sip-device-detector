@@ -14,8 +14,14 @@ let detect = (ua) => {
   re.vendor = (() => {
     let v;
     switch (true) {
+      case tryDetect(/asterisk/i):
+        v = 'asterisk';
+        break;
       case tryDetect(/grandstream/i):
         v = 'grandstream';
+        break;
+      case tryDetect(/panasonic/i):
+        v = 'panasonic';
         break;
       case tryDetect(/yealink/i):
         v = 'yealink';
@@ -32,6 +38,15 @@ let detect = (ua) => {
       case tryDetect(/mp202/i):
         v = 'audiocodes';
         break;
+      case tryDetect(/3cx/i):
+        v = '3cx';
+        break;
+      case tryDetect(/dble/i):
+        v = 'goip';
+        break;
+      case tryDetect(/sip.js/i):
+        v = 'sip.js';
+        break;
       default:
         v = 'unknown';
       }
@@ -43,17 +58,20 @@ let detect = (ua) => {
   re.type = (() => {
     let t;
     switch (true) {
-      case tryDetect(/gxp|t28p/i):
+      case tryDetect(/gxp|t28p|kx-tgp/i):
         t = 'phone';
         break;
       case tryDetect(/asterisk|pbx/i):
         t = 'pbx';
         break;
-      case tryDetect(/microsip/i):
+      case tryDetect(/microsip|3cxphone/i):
         t = 'softphone';
         break;
-      case tryDetect(/tau|mp202/i):
+      case tryDetect(/tau|mp202|spa122|dble/i):
         t = 'ata';
+        break;
+      case tryDetect(/sip.js/i):
+        t = 'webphone';
         break;
       default:
         t = 'unknown'

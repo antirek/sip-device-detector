@@ -2,9 +2,9 @@
 
 Detect sip device by User-Agent header
 
-type: phone, softphone, pbx, ata
+type: phone, softphone, pbx, ata, webphone
 
-vendor: grandstream, yealink, cisco, eltex
+vendor: grandstream, yealink, cisco, eltex, panasonic
 
 
 
