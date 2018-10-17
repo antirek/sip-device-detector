@@ -7,7 +7,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "jasmine"
+    "test": "jasmine",
+    "lint": "eslint --fix ."
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   "homepage": "https://github.com/antirek/sip-device-detector#readme",
   "devDependencies": {
     "eslint": "^5.7.0",
+    "eslint-config-google": "^0.11.0",
     "jasmine": "^3.2.0"
   }
 }

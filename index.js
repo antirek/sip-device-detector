@@ -1,13 +1,13 @@
 
-let detect = (ua) => {
-  let re = {
+const detect = (ua) => {
+  const re = {
     vendor: '', // 'grandstream', 'cisco', 'digium'
-    type: '',   // 'pbx', 'phone', 'ata', 'softphone', 'unknown'
-  }
+    type: '', // 'pbx', 'phone', 'ata', 'softphone', 'unknown'
+  };
 
-  let n = ua.toLowerCase();
-  let tryDetect = (p) => {
-    //console.log(n);
+  const n = ua.toLowerCase();
+  const tryDetect = (p) => {
+    // console.log(n);
     return p.test(n);
   };
 
@@ -35,7 +35,10 @@ let detect = (ua) => {
       case tryDetect(/tau/i):
         v = 'eltex';
         break;
-      case tryDetect(/mp202/i):
+      case tryDetect(/linksys/i):
+        v = 'linksys';
+        break;
+      case tryDetect(/mp202|audiocodes/i):
         v = 'audiocodes';
         break;
       case tryDetect(/3cx/i):
@@ -49,11 +52,11 @@ let detect = (ua) => {
         break;
       default:
         v = 'unknown';
-      }
-    
+    }
+
     return v;
   })();
-  
+
 
   re.type = (() => {
     let t;
@@ -67,19 +70,19 @@ let detect = (ua) => {
       case tryDetect(/microsip|3cxphone/i):
         t = 'softphone';
         break;
-      case tryDetect(/tau|mp202|spa122|dble/i):
+      case tryDetect(/tau|mp202|spa|dble/i):
         t = 'ata';
         break;
       case tryDetect(/sip.js/i):
         t = 'webphone';
         break;
       default:
-        t = 'unknown'
+        t = 'unknown';
     }
     return t;
   })();
 
   return re;
-}
+};
 
 module.exports = detect;
