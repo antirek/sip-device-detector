@@ -41,6 +41,9 @@ const detect = (ua) => {
       case tryDetect(/mp202|audiocodes/i):
         v = 'audiocodes';
         break;
+      case tryDetect(/c530a/i):
+        v = 'gigaset';
+        break;
       case tryDetect(/3cx/i):
         v = '3cx';
         break;
@@ -61,7 +64,7 @@ const detect = (ua) => {
   re.type = (() => {
     let t;
     switch (true) {
-      case tryDetect(/gxp|t28p|kx-tgp/i):
+      case tryDetect(/gxp|t28p|kx-tgp|c530a/i):
         t = 'phone';
         break;
       case tryDetect(/asterisk|pbx/i):
@@ -71,6 +74,10 @@ const detect = (ua) => {
         t = 'softphone';
         break;
       case tryDetect(/tau|mp202|spa|dble/i):
+        t = 'ata';
+        break;
+      case tryDetect(/gxw|ht812/i):
+        //grandstream ata
         t = 'ata';
         break;
       case tryDetect(/sip.js/i):

@@ -59,8 +59,23 @@ describe('test', () => {
         ua: 'Linksys/SPA8000-6.1.12(XU)',
         r: {vendor: 'linksys', type: 'ata'},
       },
-
-
+      {
+        ua: 'Grandstream GXW-4008  V1.5A 1.0.16.2  chip V2.2',
+        r: {vendor: 'grandstream', type: 'ata'},
+      },
+      {
+        ua: 'Grandstream HT812 1.0.5.11',
+        r: {vendor: 'grandstream', type: 'ata'},
+      },
+      {
+        ua: 'Grandstream GXW4224  V2.3B 1.0.5.8',
+        r: {vendor: 'grandstream', type: 'ata'},
+      },
+      {
+        ua: 'C530A IP/42.231.00.000.000',
+        r: {vendor: 'gigaset', type: 'phone'},
+      },
+      
     ];
 
     s.map((item) => {
