@@ -75,7 +75,24 @@ describe('test', () => {
         ua: 'C530A IP/42.231.00.000.000',
         r: {vendor: 'gigaset', type: 'phone'},
       },
+      {
+        ua: 'Panasonic_KX-TGP500B09/22.85 (0080f0fb5739)',
+        r: {vendor: 'panasonic', type: 'phone'},
+      },
+      {
+        ua: 'AUDC-IPPhone/1.6.0_p003_build_44_ce6 (320HD; 00908F225074)',
+        r: {vendor: 'audiocodes', type: 'phone'},
+      },
+      {
+        ua: 'Jitsi2.10.5550Windows 7',
+        r: {vendor: 'jitsi', type: 'softphone'},
+      },
+      {
+        ua: 'Yealink SIP-T19P_E2 53.80.15.1',
+        r: {vendor: 'yealink', type: 'phone'},
+      },
       
+
     ];
 
     s.map((item) => {

@@ -38,7 +38,7 @@ const detect = (ua) => {
       case tryDetect(/linksys/i):
         v = 'linksys';
         break;
-      case tryDetect(/mp202|audiocodes/i):
+      case tryDetect(/mp202|audiocodes|audc-ipphone/i):
         v = 'audiocodes';
         break;
       case tryDetect(/c530a/i):
@@ -46,6 +46,9 @@ const detect = (ua) => {
         break;
       case tryDetect(/3cx/i):
         v = '3cx';
+        break;
+      case tryDetect(/jitsi/i):
+        v = 'jitsi';
         break;
       case tryDetect(/dble/i):
         v = 'goip';
@@ -64,13 +67,13 @@ const detect = (ua) => {
   re.type = (() => {
     let t;
     switch (true) {
-      case tryDetect(/gxp|t28p|kx-tgp|c530a/i):
+      case tryDetect(/gxp|kx-tgp|c530a|audc-ipphone|yealink sip-t/i):
         t = 'phone';
         break;
       case tryDetect(/asterisk|pbx/i):
         t = 'pbx';
         break;
-      case tryDetect(/microsip|3cxphone/i):
+      case tryDetect(/microsip|3cxphone|jitsi/i):
         t = 'softphone';
         break;
       case tryDetect(/tau|mp202|spa|dble/i):
